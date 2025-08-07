@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 這是內部腳本
+        var x;
+        let y = 5;
+        const z = 10.12;
+        console.log(x , y, z);
+        let name = "John";
+        console.log(name);
+        let empty = null;
+        console.log(empty);
+        
+        let age = 19;
+        if(age > 18) {
+            console.log("成年人");
+        } else {
+            console.log("未成年人");
+        }
+
+        let time = 12;
+        switch(time) {
+            case 6:
+                console.log("早上");
+                break;
+            case 12:
+                console.log("中午");
+                break;
+            case 18:
+                console.log("晚上");
+                break;
+            default:
+                console.log("其他時間");
+        }
+
+        for(let i = 0; i < 10; i++) {
+            if(i === 2) {
+                continue; // 跳過當前循環
+            }
+            if(i === 4) {
+                break; // 終止循環
+            }
+            console.log("循環次數：" + i);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #ddd;
+        }
+    </style>
+    <script src="./js/table.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">表格的增刪改查</h1>
+    <button onclick="addData()">新增</button>
+    <table id="data-table">
+        <tr>
+            <th>姓名</th>
+            <th>聯繫方式</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>小明</td>
+            <td>1234567890</td>
+            <td>
+                <button onclick="editData(this)">編輯</button>
+                <button onclick="deleteData(this)">刪除</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

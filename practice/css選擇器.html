@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 元素選擇器 */
+        h1{
+            color: red;
+        }
+        /* 類選擇器 */
+        .example {
+            font-weight: bold;
+            color: green;
+        }
+        /* ID選擇器 */
+        #example-id {
+            color: blue;
+        }
+        /* 通配選擇器 */
+        * {
+            font-family: 'KaiTi';
+            font-size: 36px;
+        }
+        /* 子元素選擇器 */
+        .father > .child {
+            color: brown;
+        }
+        /* 後代選擇器 */
+        .father p{
+            color: purple;
+            background-color: lightgray;
+            padding: 20px;
+        }
+        /* 相鄰兄弟選擇器 */
+        h3 + p {
+            color: orange;
+            font-size: 24px;
+        }
+        /* 偽裝選擇器 */
+        #element:hover {
+            content: "這是偽裝選擇器的內容";
+            color: darkblue;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>選擇器</h1>
+
+    <h2>CSS 選擇器示例</h2>
+    
+    <h3 class="example">這是一個類選擇器</h3>
+
+    <h3 id="example-id">這是一個ID選擇器</h3>
+
+    <div class="father">
+        <p class="child">這是一個子元素</p>
+        <p>這是另一個子元素</p>
+        <div>
+            <p class="grandchild">這是更深層的子元素</p>
+        </div>
+    </div>
+
+    <p>這是一個段落</p>
+    <h3>這是一個相鄰選擇器</h3>
+    <p>這是一個段落</p>
+
+    <h3 id="element">偽裝選擇器示例</h3>
+</body>
+</html>

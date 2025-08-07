@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function helloWorld() {
+            console.log("Hello, World!");
+        }
+
+        helloWorld();
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        let sum = add(5, 10); // 返回 15
+        console.log("Sum:", sum);
+
+        // 作用域示例
+        let globalVar = "I am a global variable";
+        function scopeExample() {
+            let localVar = "I am a local variable";
+            console.log(globalVar); // 可以訪問全局變量
+            console.log(localVar); // 可以訪問局部變量
+        }
+        console.log(localVar); // 這將報錯，因為 localVar 在全局作用域中不可見
+        
+        scopeExample();
+        
+    </script>
+
+    
+</body>
+</html>

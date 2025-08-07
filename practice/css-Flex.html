@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            display: flex;
+            justify-content: space-between;
+            background-color: lightblue;
+            border: 3px solid black;
+            /* height: 200px; */
+        }
+        .left-son, .right-son {
+            width: 100px;
+            height: 100px;
+        }
+        .left-son {
+            background-color: lightcoral;
+        }
+        .right-son {
+            background-color: yellow;
+        }
+        img {
+            /* float: left; */
+            display: inline-block;
+            margin-right: 10px;
+            width: 150px;
+        }
+        .middle {
+            flex-grow: 1;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="father">
+        <div class="left-son">左邊</div>
+        <div class="middle">
+            <h1>標題</h1>
+            <p>這是一段文字</p>
+        </div>
+        <div class="right-son">右邊</div>
+    </div>
+    
+    <img src="https://titangene.github.io/images/cover/flutter.jpg" alt="圖">
+    <span>
+    這是一段文字，會自動繞過圖片來顯示。這是一段文字，會自動繞過圖片來顯示。
+    這是一段文字，會自動繞過圖片來顯示。這是一段文字，會自動繞過圖片來顯示。
+    </span>
+</body>
+</html>

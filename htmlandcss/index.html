@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="這是一個HTML範例頁面，包含了各種元素和樣式。" />
+    <meta name="keywords" content="HTML, CSS, 範例, 教學" />
+    <meta property="og:url"
+        content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:image"
+        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+</head>
+
+<body>
+    <header style="background-color: lightgray; padding: 10px;">
+        <p>
+            <a href="#">首頁</a>
+            <a href="#">關於</a>
+            <a href="#">聯絡</a>
+        </p>
+    </header>
+
+    <main>
+        <h1>主要內容</h1>
+        <h2>這是第一個標題</h2>
+        <p>這是一個&nbsp;&Tab;段落</p>
+        <p>&trade;這是商標符號</p>
+        <p>&copy;這是版權符號</p>
+        <p>&reg;這是註冊符號</p>
+
+        <p><b>這是加粗</b></p>
+        <p><strong>這是強調</strong></p>
+        <p><i>這是斜體</i></p>
+        <p><em>這是強調斜體</em></p>
+
+        <div style="background-color: aqua;">
+            第一格區塊
+            這是第一格區塊的內容
+        </div>
+        <div>
+            第二格區塊
+        </div>
+
+        <br />
+        <!-- 以下是第二段落： -->
+        <h2>這是第二個標題</h2>
+        <p>這是另一個段落</p>
+
+        <!-- 無序列表和有序列表的示例： -->
+        <ul>
+            <li>這是第一個列表項目</li>
+            <li>這是第二個列表項目</li>
+            <li>這是第三個列表項目</li>
+        </ul>
+
+        <ol>
+            <li>這是第一個有序列表項目</li>
+            <li>這是第二個有序列表項目</li>
+            <li>這是第三個有序列表項目</li>
+        </ol>
+
+        <a href="https://www.google.com" target="_parent">google</a>
+        <a href="mailto:VYH6P@example.com">mail</a>
+        <a href="https://www.google.com"><img src="./assets/images.jpg" alt="karina" height="150" /></a>
+
+        <ul>
+            <li><a href="#bird">鳥類區域</a></li>
+            <li><a href="#dog">狗類區域</a></li>
+        </ul>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
+
+        <h2 id="bird">鳥類區域</h2>
+        <p>這是關於鳥類的段落。</p>
+
+        <h2 id="dog">狗類區域</h2>
+        <p>這是關於狗類的段落。</p>
+
+        <form action="xxx.com/index.php" method="post">
+            <label for="name">帳號:</label>
+            <input type="text" id="name" name="name" required />
+            <br /><br />
+            <label for="password">密碼:</label>
+            <input type="password" id="password" name="password" required />
+            <br /><br />
+            <label for="email">電子郵件:</label>
+            <input type="email" id="email" name="email" required />
+            <br /><br />
+            <label for="">出發時間</label>
+            <input type="date" id="" name="" required />
+            <br /><br />
+            <label>停留時間</label>
+            <input type="number" name="stay" min="1" max="30" required />
+            <input type="submit" value="提交" />
+            <br /><br />
+            <label for="comment">評論或反饋:</label><br />
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <br /><br />
+        </form>
+        <br /><br />
+        <h3>喜歡的運動</h3>
+        <!-- 單選 -->
+        <input type="radio" name="question1" value="是" /><label>是</label>
+        <input type="radio" name="question1" value="否" />否
+        <!-- 多選 -->
+        <br /><br />
+        <input type="checkbox" name="sport" value="選項1" /><label>選項1</label>
+        <input type="checkbox" name="sport" value="選項2" /><label>選項2</label>
+
+        <!-- 下拉式選單 -->
+        <h3>選擇城市</h3>
+        <select name="city" id="city">
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+        </select>
+
+        <h1>這是烘培雞</h1>
+        <iframe src="./first.html" frameborder="0">你看的到這段文字嗎</iframe>
+        <iframe src="./second.html" frameborder="0">你看的到這段文字嗎</iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3yuBOB3VrCk?si=hmLv1UzUjrWDmgcu"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <audio controls>
+            <source src="./assets/music.mp3" type="audio/mpeg">
+            <source src="./assets/music.ogg" type="audio/ogg">
+            您的瀏覽器不支援音訊播放。
+        </audio>
+    </main>
+
+    <footer>
+        <p>這是頁腳內容</p>
+        <p>聯絡我們: <a href="mailto:jgFjI@example.com">jgFjI@example.com</a></p>
+        <p>版權所有 &copy; 2023</p>
+    </footer>
+
+</html>

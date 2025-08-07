@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件處裡</title>
+</head>
+<body>
+    <button onclick="handleClick()">點擊我</button>
+    <input type="text" onfocus="handleFocus()" onblur="handleBlur()" placeholder="點擊輸入框">
+    <Script>
+        // 事件處理函數
+        function handleClick() {
+            alert("按鈕被點擊了！");
+        }
+
+        function handleFocus() {
+            console.log("輸入框獲得焦點");
+        }
+        function handleBlur() {
+            console.log("輸入框失去焦點");
+        }
+    </Script>
+
+</body>
+</html>

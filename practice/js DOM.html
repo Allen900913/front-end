@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1">這是一個id選擇器</div>
+    <div class="box2">這是一個class選擇器</div>
+    <div>普通div</div>
+    <button>這是一個按鈕</button>
+
+    <script>
+        var box1 = document.getElementById("box1");
+        console.log(box1); // 獲取id為box1的元素
+
+        var box2 = document.getElementsByClassName("box2");
+        console.log(box2); // 獲取class為box2的元素，返回
+
+        var divs = document.getElementsByTagName("div")[2];
+        console.log(divs); // 獲取所有div元素，返回一個HTML
+    
+        box1.innerHTML = "<strong>這是<strong style='color:red'>修改後</strong>的內容！</strong>";
+        divs.style.color = "blue"; // 修改第三個div的文字顏色為藍色
+        divs.style.fontSize = "20px"; // 修改第三個div的字體大小為20px
+
+        var button = document.getElementsByTagName("button")[0];
+        // button.onclick = function() {
+        //     alert("按鈕被點擊了！");
+        // };
+
+        button.addEventListener("click", clickHandler);
+
+        function clickHandler() {
+            alert("按鈕被點擊了！");
+        }
+
+    </script>
+</body>
+</html>

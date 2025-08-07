@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動態式響應</title>
+    <style>
+        html {
+            font-size: 16px; /* 基準字體大小 */
+        }
+
+        .box-px {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+        }
+
+        .box-rem {
+            width: 5rem; /* 20 * 16px = 320px */
+            height: 3rem; /* 20 * 16px = 320px */
+            background-color: lightcoral;
+            margin-top: 20px; /* 20 * 16px = 320px */
+        }
+    </style>
+</head>
+<body>
+    <div class="box-px"></div>
+
+    <div class="box-rem"></div>
+
+    <script>
+        function resetHtmlFontSize(){
+            document.documentElement.style.fontSize = screen.width / 10 + 'px';
+        }
+
+        resetHtmlFontSize();
+
+        window.onresize = resetHtmlFontSize;
+    </script>
+</body>
+</html>
