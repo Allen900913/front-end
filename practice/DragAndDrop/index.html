@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖放圖片範例</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>拖動你喜歡的圖案到衣服上吧</h1>
+        
+        <!-- 空的容器 -->
+        <div class="empty" id="empty"></div>
+
+        <!-- 可拖放的圖片區域 -->
+        <section class="patterns">
+            <h2>選擇圖案</h2>
+            <div class="image-container">
+                <img draggable="true" src="image1.jpg" alt="winter" class="draggable">
+                <img draggable="true" src="image2.jpg" alt="ning" class="draggable">
+                <img draggable="true" src="image3.jpg" alt="karina" class="draggable">
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

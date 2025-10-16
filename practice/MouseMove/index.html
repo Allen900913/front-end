@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 滑鼠拖曳 Demo</title>
+    <style>
+        body { margin: 0; height: 100vh; background-color: #f4f4f4; }
+        
+        #draggable {
+            width: 150px;
+            height: 100px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            /* 讓元素可以被移動的關鍵：絕對定位 */
+            position: absolute; 
+            top: 50px;
+            left: 50px;
+            cursor: grab; /* 鼠標樣式，表示可抓取 */
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        #info-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: monospace;
+            z-index: 1000;
+        }
+
+        .dragging {
+            cursor: grabbing; /* 拖曳時的鼠標樣式 */
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="draggable">拖曳我！</div>
+    
+    <div id="info-box">
+        X: <span id="pos-x">0</span><br>
+        Y: <span id="pos-y">0</span><br>
+        移動距離X: <span id="move-x">0</span><br>
+        移動距離Y: <span id="move-y">0</span>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

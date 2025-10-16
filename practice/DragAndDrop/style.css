@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* 空的拖放區域 */
+.empty {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px;
+    border: 5px dashed #fff;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.empty::before {
+    content: '將圖案拖放到這裡';
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    position: absolute;
+}
+
+.empty.drag-over {
+    border-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.2);
+    transform: scale(1.05);
+}
+
+.empty img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.empty:has(img)::before {
+    display: none;
+}
+
+/* 圖案選擇區域 */
+.patterns {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.draggable {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    cursor: grab;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f5f5f5;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.draggable:hover {
+    transform: scale(1.1);
+    border-color: #667eea;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+.draggable.dragging {
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .empty {
+        width: 250px;
+        height: 250px;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+    }
+
+    .draggable {
+        height: 120px;
+    }
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.patterns, .tshirt-preview {
+    animation: fadeIn 0.5s ease-out;
+}

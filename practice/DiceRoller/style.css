@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1 {
+  color: hsl(223, 100%, 64%);
+}
+
+label {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+button {
+  font-size: 1.5em;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: hsl(210, 100%, 50%);
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(210, 100%, 60%);
+}
+button:active {
+  background-color: hsl(210, 100%, 70%);
+}
+
+input {
+  font-size: 2em;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+}
